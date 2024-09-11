@@ -31,7 +31,7 @@ namespace CameraApp
                 Manufacturer = txtManufacturer.Text,
                 Price = decimal.Parse(txtPrice.Text),
                 Supplier = txtSupplier.Text,
-                SaleDate = null, // установить, если это необходимо
+                SaleDate = null, 
                 IsDefective = chkIsDefective.Checked
             };
 
