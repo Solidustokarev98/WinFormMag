@@ -18,7 +18,7 @@ namespace CameraApp
 
         private void LoadData()
         {
-            List<Camera> cameras = _context.Cameras.ToList();
+            var cameras = _context.Cameras.ToList();
             dataGridView.DataSource = cameras;
         }
 
@@ -27,7 +27,7 @@ namespace CameraApp
             var camera = new Camera
             {
                 Name = txtName.Text,
-                ReleaseDate = dtpReleaseDate.Value,
+                ReleaseDate = dtpReleaseDate.Value.ToString("yyyy-MM-dd"),
                 Manufacturer = txtManufacturer.Text,
                 Price = decimal.Parse(txtPrice.Text),
                 Supplier = txtSupplier.Text,
@@ -47,7 +47,7 @@ namespace CameraApp
                 var selectedCamera = (Camera)dataGridView.SelectedRows[0].DataBoundItem;
                 
                 selectedCamera.Name = txtName.Text;
-                selectedCamera.ReleaseDate = dtpReleaseDate.Value;
+                selectedCamera.ReleaseDate = dtpReleaseDate.Value.ToString("yyyy-MM-dd");
                 selectedCamera.Manufacturer = txtManufacturer.Text;
                 selectedCamera.Price = decimal.Parse(txtPrice.Text);
                 selectedCamera.Supplier = txtSupplier.Text;
@@ -76,7 +76,7 @@ namespace CameraApp
             {
                 var selectedCamera = (Camera)dataGridView.SelectedRows[0].DataBoundItem;
                 txtName.Text = selectedCamera.Name;
-                dtpReleaseDate.Value = selectedCamera.ReleaseDate;
+                dtpReleaseDate.Value = DateTime.Parse(selectedCamera.ReleaseDate);
                 txtManufacturer.Text = selectedCamera.Manufacturer;
                 txtPrice.Text = selectedCamera.Price.ToString();
                 txtSupplier.Text = selectedCamera.Supplier;
