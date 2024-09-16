@@ -1,160 +1,187 @@
 ﻿namespace CameraApp
 {
-    partial class MainForm
-    {
-        private System.ComponentModel.IContainer components = null;
+	partial class MainForm
+	{
+		private System.ComponentModel.IContainer components = null;
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        private void InitializeComponent()
-        {
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.dtpReleaseDate = new System.Windows.Forms.DateTimePicker();
-            this.txtManufacturer = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtSupplier = new System.Windows.Forms.TextBox();
-            this.chkIsDefective = new System.Windows.Forms.CheckBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.SuspendLayout();
+		private void InitializeComponent()
+		{
+			dataGridView = new DataGridView();
+			txtName = new TextBox();
+			dtpReleaseDate = new DateTimePicker();
+			txtManufacturer = new TextBox();
+			txtPrice = new TextBox();
+			txtSupplier = new TextBox();
+			chkIsDefective = new CheckBox();
+			btnAdd = new Button();
+			btnEdit = new Button();
+			btnDelete = new Button();
+			btnAddToCart = new Button();
+			btnOpenCart = new Button();
 
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(776, 300);
-            this.dataGridView.TabIndex = 0;
-            this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
-
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(12, 318);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(200, 20);
-            this.txtName.TabIndex = 1;
-
-            // 
-            // dtpReleaseDate
-            // 
-            this.dtpReleaseDate.Location = new System.Drawing.Point(228, 318);
-            this.dtpReleaseDate.Name = "dtpReleaseDate";
-            this.dtpReleaseDate.Size = new System.Drawing.Size(200, 20);
-            this.dtpReleaseDate.TabIndex = 2;
-
-            // 
-            // txtManufacturer
-            // 
-            this.txtManufacturer.Location = new System.Drawing.Point(444, 318);
-            this.txtManufacturer.Name = "txtManufacturer";
-            this.txtManufacturer.Size = new System.Drawing.Size(200, 20);
-            this.txtManufacturer.TabIndex = 3;
-
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(12, 360);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(200, 20);
-            this.txtPrice.TabIndex = 4;
-
-            // 
-            // txtSupplier
-            // 
-            this.txtSupplier.Location = new System.Drawing.Point(228, 360);
-            this.txtSupplier.Name = "txtSupplier";
-            this.txtSupplier.Size = new System.Drawing.Size(200, 20);
-            this.txtSupplier.TabIndex = 5;
-
-            // 
-            // chkIsDefective
-            // 
-            this.chkIsDefective.AutoSize = true;
-            this.chkIsDefective.Location = new System.Drawing.Point(444, 360);
-            this.chkIsDefective.Name = "chkIsDefective";
-            this.chkIsDefective.Size = new System.Drawing.Size(89, 17);
-            this.chkIsDefective.TabIndex = 6;
-            this.chkIsDefective.Text = "Is Defective";
-            this.chkIsDefective.UseVisualStyleBackColor = true;
-
-            // 
-            // btnAdd
-            //
-
-            this.btnAdd.Location = new System.Drawing.Point(12, 400);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(93, 400);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 8;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(174, 400);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 9;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-
-            // 
-            // MainForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.chkIsDefective);
-            this.Controls.Add(this.txtSupplier);
-            this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtManufacturer);
-            this.Controls.Add(this.dtpReleaseDate);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.dataGridView);
-            this.Name = "MainForm";
-            this.Text = "Camera Management";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-        }
-
-        private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.DateTimePicker dtpReleaseDate;
-        private System.Windows.Forms.TextBox txtManufacturer;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtSupplier;
-        private System.Windows.Forms.CheckBox chkIsDefective;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDelete;
-    }
+			((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+			SuspendLayout();
+			// 
+			// dataGridView
+			// 
+			dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView.Location = new Point(14, 14);
+			dataGridView.Margin = new Padding(4, 3, 4, 3);
+			dataGridView.Name = "dataGridView";
+			dataGridView.Size = new Size(905, 346);
+			dataGridView.TabIndex = 0;
+			dataGridView.SelectionChanged += dataGridView_SelectionChanged;
+			// 
+			// txtName
+			// 
+			txtName.Location = new Point(14, 367);
+			txtName.Margin = new Padding(4, 3, 4, 3);
+			txtName.Name = "txtName";
+			txtName.Size = new Size(233, 23);
+			txtName.TabIndex = 1;
+			// 
+			// dtpReleaseDate
+			// 
+			dtpReleaseDate.Location = new Point(266, 367);
+			dtpReleaseDate.Margin = new Padding(4, 3, 4, 3);
+			dtpReleaseDate.Name = "dtpReleaseDate";
+			dtpReleaseDate.Size = new Size(233, 23);
+			dtpReleaseDate.TabIndex = 2;
+			// 
+			// txtManufacturer
+			// 
+			txtManufacturer.Location = new Point(518, 367);
+			txtManufacturer.Margin = new Padding(4, 3, 4, 3);
+			txtManufacturer.Name = "txtManufacturer";
+			txtManufacturer.Size = new Size(233, 23);
+			txtManufacturer.TabIndex = 3;
+			// 
+			// txtPrice
+			// 
+			txtPrice.Location = new Point(14, 415);
+			txtPrice.Margin = new Padding(4, 3, 4, 3);
+			txtPrice.Name = "txtPrice";
+			txtPrice.Size = new Size(233, 23);
+			txtPrice.TabIndex = 4;
+			// 
+			// txtSupplier
+			// 
+			txtSupplier.Location = new Point(266, 415);
+			txtSupplier.Margin = new Padding(4, 3, 4, 3);
+			txtSupplier.Name = "txtSupplier";
+			txtSupplier.Size = new Size(233, 23);
+			txtSupplier.TabIndex = 5;
+			// 
+			// chkIsDefective
+			// 
+			chkIsDefective.AutoSize = true;
+			chkIsDefective.Location = new Point(518, 415);
+			chkIsDefective.Margin = new Padding(4, 3, 4, 3);
+			chkIsDefective.Name = "chkIsDefective";
+			chkIsDefective.Size = new Size(86, 19);
+			chkIsDefective.TabIndex = 6;
+			chkIsDefective.Text = "Is Defective";
+			chkIsDefective.UseVisualStyleBackColor = true;
+			// 
+			// btnAdd
+			// 
+			btnAdd.Location = new Point(14, 462);
+			btnAdd.Margin = new Padding(4, 3, 4, 3);
+			btnAdd.Name = "btnAdd";
+			btnAdd.Size = new Size(88, 27);
+			btnAdd.TabIndex = 7;
+			btnAdd.Text = "Add";
+			btnAdd.UseVisualStyleBackColor = true;
+			btnAdd.Click += btnAdd_Click;
+			// 
+			// btnEdit
+			// 
+			btnEdit.Location = new Point(108, 462);
+			btnEdit.Margin = new Padding(4, 3, 4, 3);
+			btnEdit.Name = "btnEdit";
+			btnEdit.Size = new Size(88, 27);
+			btnEdit.TabIndex = 8;
+			btnEdit.Text = "Edit";
+			btnEdit.UseVisualStyleBackColor = true;
+			btnEdit.Click += btnEdit_Click;
+			// 
+			// btnDelete
+			// 
+			btnDelete.Location = new Point(203, 462);
+			btnDelete.Margin = new Padding(4, 3, 4, 3);
+			btnDelete.Name = "btnDelete";
+			btnDelete.Size = new Size(88, 27);
+			btnDelete.TabIndex = 9;
+			btnDelete.Text = "Delete";
+			btnDelete.UseVisualStyleBackColor = true;
+			btnDelete.Click += btnDelete_Click;
+			// 
+			// btnAddToCart
+			// 
+			btnAddToCart.Location = new Point(299, 462);
+			btnAddToCart.Margin = new Padding(4, 3, 4, 3);
+			btnAddToCart.Name = "btnAddToCart";
+			btnAddToCart.Size = new Size(117, 27);
+			btnAddToCart.TabIndex = 10;
+			btnAddToCart.Text = "Добавить в корзину";
+			btnAddToCart.UseVisualStyleBackColor = true;
+			btnAddToCart.Click += btnAddToCart_Click;
+			// 
+			// btnOpenCart
+			// 
+			btnOpenCart.Location = new Point(420, 462);
+			btnOpenCart.Margin = new Padding(4, 3, 4, 3);
+			btnOpenCart.Name = "btnOpenCart";
+			btnOpenCart.Size = new Size(117, 27);
+			btnOpenCart.TabIndex = 11;
+			btnOpenCart.Text = "Открыть корзину";
+			btnOpenCart.UseVisualStyleBackColor = true;
+			btnOpenCart.Click += btnOpenCart_Click;
+			// 
+			// MainForm
+			// 
+			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleMode = AutoScaleMode.Font;
+			ClientSize = new Size(933, 519);
+			Controls.Add(btnDelete);
+			Controls.Add(btnEdit);
+			Controls.Add(btnAdd);
+			Controls.Add(chkIsDefective);
+			Controls.Add(txtSupplier);
+			Controls.Add(txtPrice);
+			Controls.Add(txtManufacturer);
+			Controls.Add(dtpReleaseDate);
+			Controls.Add(txtName);
+			Controls.Add(dataGridView);
+			Controls.Add(btnAddToCart);
+			Controls.Add(btnOpenCart);
+			Margin = new Padding(4, 3, 4, 3);
+			Name = "MainForm";
+			Text = "Camera Management";
+			((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+			ResumeLayout(false);
+			PerformLayout();
+		}
+		private System.Windows.Forms.DataGridView dataGridView;
+		private System.Windows.Forms.TextBox txtName;
+		private System.Windows.Forms.DateTimePicker dtpReleaseDate;
+		private System.Windows.Forms.TextBox txtManufacturer;
+		private System.Windows.Forms.TextBox txtPrice;
+		private System.Windows.Forms.TextBox txtSupplier;
+		private System.Windows.Forms.CheckBox chkIsDefective;
+		private System.Windows.Forms.Button btnAdd;
+		private System.Windows.Forms.Button btnEdit;
+		private System.Windows.Forms.Button btnDelete;
+		private System.Windows.Forms.Button btnAddToCart;
+		private System.Windows.Forms.Button btnOpenCart;
+	}
 }
